@@ -157,7 +157,7 @@ class Page
                         }
                     }
 
-                    $this->content = $dom->saveHTML($body);
+                    $this->content = utf8_decode($dom->saveHTML($body));
                     $this->tidyStartOfContent();
                     return;
                 }
@@ -231,7 +231,7 @@ class Page
                     }
                 }
 
-                $this->content = $dom->saveHTML($body);
+                $this->content = utf8_decode($dom->saveHTML($body));
                 return;
             }
         }
